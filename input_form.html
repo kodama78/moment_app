@@ -8,33 +8,38 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
     <div class="container-fluid" id="main_page_container">
-        <form role="form" class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3">
-            <div class="form-group">
-                <label for="avg_kwhm">Average kwh/m</label>
-                <input type="text" class="form-control" id="kwhm" name="kwhm">
+        <form role="form" class="col-xs-8 col-xs-offset- col-md-6 col-md-offset-3" id="power_calculator_form">
+            <label for="avg_kwhm">Average kwh/m</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="kwhm" name="kwhm" placeholder="Ex: 500">
+                <div class="input-group-addon hidden-xs">kWh/month</div>
             </div>
-            <div class="form-group">
-                <label for="percentage_solar">How much of your electric bill would you like to offset?</label>
-                <input type="text" class="form-control" id="desired_bill_offset" name="percentage_solar">
+            <label for="percentage_solar">How much of your electric bill would you like to offset?</label>
+            <div class="input-group">                
+                <input type="text" class="form-control" id="desired_bill_offset" name="percentage_solar" placeholder="Ex: 100%">
+                <div class="input-group-addon hidden-xs">Percent</div>
             </div>
-            <div class="form-group">
-                <label for="peak_sun_hours">How many sunhours do you get per day</label>
-                <input type="text" class="form-control" id="peak_sun_hours" name="peak_sun_hours">
+            <label for="peak_sun_hours">How many sunhours do you get per day</label>
+            <div class="input-group">                
+                <input type="text" class="form-control" id="peak_sun_hours" name="peak_sun_hours" placeholder="Ex: 5">
+                <div class="input-group-addon hidden-xs">Hours per day</div>
             </div>
-            <div class="form-group">
+            <div class="input-group">
               <button type="button" class="btn btn-default" id="solar_form_calculate">Calculate</button>
-              <button type="button" class="btn btn-default" id="solar_form_reset" value="Reset">Reset</button>
+              <button type="reset" class="btn btn-default" id="solar_form_reset" value="Reset">Reset</button>
             </div>
             </br>
-            <div class="form-group">
-              <label for="min_system_size">Your minimum system size: </label>
+            <label for="min_system_size">Your minimum system size: </label>
+            <div class="input-group">             
               <input type="text" class="form-control input-md" id="SystemSize" name="SystemSize" value="0" maxlength="10" size="5">
+              <div class="input-group-addon hidden-xs">kWs</div>
             </div>
-            <div class="form-group">
-             <label for="panel_wattage">Select list (select one):</label>
+            <div class="input-group">
+             <label for="panel_wattage">Panel Wattage (approximate):</label>
              <select class="form-control" id="panel_wattage" name="panel_wattage">
                 <option value="200">200 Watts</option>
                 <option value="210">210 Watts</option>
@@ -51,9 +56,10 @@
                 <option value="320">320 Watts</option>
              </select>
              </div>
-             <div class="form-group">
-               <label for="required_panels">Approximate required number of panels required: </label>
+             <label for="required_panels">Approximate required number of panels required: </label>
+             <div class="input-group">              
                <input name="numberOfPanels" class="form-control input-md" size="8" maxlength="8">
+               <div class="input-group-addon hidden-xs">Panels</div>
              </div>
         </form>
     </div>
