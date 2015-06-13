@@ -11,7 +11,7 @@ function temp(form){
   SystemRaw = (FirstStep/SunHours);
   System_to_KW = SystemRaw / 1000;
   System = parseInt(SystemRaw);
-  form.SystemSize.value = System_to_KW;
+  form.SystemSize.value = System_to_KW.toFixed(1);
   form.numberOfPanels.value = Math.ceil(System / panel_size);
   console.log('system size is', System_to_KW + 'KW');
   console.log('form result is ', form);
