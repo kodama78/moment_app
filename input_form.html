@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+    <div class="container-fluid" id="main_page_container">
+        <form role="form" class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3">
+            <div class="form-group">
+                <label for="avg_kwhm">Average kwh/m</label>
+                <input type="text" class="form-control" id="kwhm" name="kwhm">
+            </div>
+            <div class="form-group">
+                <label for="percentage_solar">How much of your electric bill would you like to offset?</label>
+                <input type="text" class="form-control" id="desired_bill_offset" name="percentage_solar">
+            </div>
+            <div class="form-group">
+                <label for="peak_sun_hours">How many sunhours do you get per day</label>
+                <input type="text" class="form-control" id="peak_sun_hours" name="peak_sun_hours">
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-default" id="solar_form_calculate">Calculate</button>
+              <button type="button" class="btn btn-default" id="solar_form_reset" value="Reset">Reset</button>
+            </div>
+            </br>
+            <div class="form-group">
+              <label for="min_system_size">Your minimum system size: </label>
+              <input type="text" class="form-control input-md" id="SystemSize" name="SystemSize" value="0" maxlength="10" size="5">
+            </div>
+            <div class="form-group">
+             <label for="panel_wattage">Select list (select one):</label>
+             <select class="form-control" id="panel_wattage" name="panel_wattage">
+                <option value="200">200 Watts</option>
+                <option value="210">210 Watts</option>
+                <option value="220">220 Watts</option>
+                <option value="230">230 Watts</option>
+                <option value="240">240 Watts</option>
+                <option value="250">250 Watts</option>
+                <option value="260">260 Watts</option>
+                <option value="270">270 Watts</option>
+                <option value="280">280 Watts</option>
+                <option value="290">290 Watts</option>
+                <option value="300">300 Watts</option>
+                <option value="310">310 Watts</option>
+                <option value="320">320 Watts</option>
+             </select>
+             </div>
+             <div class="form-group">
+               <label for="required_panels">Approximate required number of panels required: </label>
+               <input name="numberOfPanels" class="form-control input-md" size="8" maxlength="8">
+             </div>
+        </form>
+    </div>
+</body>
+</html>
