@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top_nav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">TruePower</a>
+            </div>
+            <div class="collapse navbar-collapse" id="top_nav">
+                <ul class="nav navbar-nav" >
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="container-fluid" id="index_page_container">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-md-4 col-lg-4" id="information_container">
+                <ul>
+                    <h3>Why use TruePower?</h3>
+                    <li>Real information</li>
+                    <li>Be prepared</li>
+                    <li>Expert service</li>
+                </ul>
+            </div>
+            <form role="form" class="col-xs-12 col-md-6 col-lg-6 pull-right" id="power_calculator_form">
+                <label for="avg_kwhm">Average kwh/m</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="kwhm" name="kwhm" placeholder="Ex: 500">
+                    <div class="input-group-addon hidden-xs">kWh/month</div>
+                </div>
+                <label for="percentage_solar">How much of your electric bill would you like to offset?</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="desired_bill_offset" name="percentage_solar" placeholder="Ex: 100%">
+                    <div class="input-group-addon hidden-xs">Percent</div>
+                </div>
+                <label for="peak_sun_hours">How many sunhours do you get per day</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="peak_sun_hours" name="peak_sun_hours" placeholder="Ex: 5">
+                    <div class="input-group-addon hidden-xs">Hours per day</div>
+                </div>
+                <div class="input-group">
+                    <button type="button" class="btn btn-default" id="solar_form_calculate">Calculate</button>
+                    <button type="reset" class="btn btn-default" id="solar_form_reset" value="Reset">Reset</button>
+                </div>
+                </br>
+                <label for="min_system_size">Your minimum system size: </label>
+                <div class="input-group">
+                    <input type="text" class="form-control input-md" id="SystemSize" name="SystemSize" value="0" maxlength="10" size="5">
+                    <div class="input-group-addon hidden-xs">kWs</div>
+                </div>
+                <div class="input-group">
+                    <label for="panel_wattage">Panel Wattage (approximate):</label>
+                    <select class="form-control" id="panel_wattage" name="panel_wattage">
+                        <option value="200">200 Watts</option>
+                        <option value="210">210 Watts</option>
+                        <option value="220">220 Watts</option>
+                        <option value="230">230 Watts</option>
+                        <option value="240">240 Watts</option>
+                        <option value="250">250 Watts</option>
+                        <option value="260">260 Watts</option>
+                        <option value="270">270 Watts</option>
+                        <option value="280">280 Watts</option>
+                        <option value="290">290 Watts</option>
+                        <option value="300">300 Watts</option>
+                        <option value="310">310 Watts</option>
+                        <option value="320">320 Watts</option>
+                    </select>
+                </div>
+                <label for="required_panels">Approximate required number of panels required: </label>
+                <div class="input-group">
+                    <input name="numberOfPanels" class="form-control input-md" size="8" maxlength="8">
+                    <div class="input-group-addon hidden-xs">Panels</div>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-6" id="chart_container">
+            <div id="chart_border">
+                <div id="bar_one"></div>
+                <div id="bar_two"></div>
+                <div id="bar_three"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer container-fluid footer_container header_color" id="footer">
+        <ul class="header_color col-xs-12 col-md-12 col-lg-12">
+            <li class="col-xs-4 col-md-4"><a href="#"><i class="fa fa-twitter-square social_icons"></i></a></li>
+            <li class="col-xs-4 col-md-4"><a href="#"><i class="fa fa-instagram social_icons"></i></a></li>
+            <li class="col-xs-4 col-md-4"><a href="#"><i class="fa fa-facebook-square social_icons"></i></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
