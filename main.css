@@ -1,0 +1,25 @@
+
+header{
+	background-color: lavender;
+}
+.main_body{
+	height: 100vh;
+	width: 100vw;
+	background-color: grey;
+}
+.nopadding {
+    padding: 0;
+}
+/* 
+====================================
+THOUGHTS SECTION
+====================================
+*/
+.thoughts_pane{
+	text-align: center;
+}
+.textarea_thoughts{
+	min-width: 70%;
+	min-height: 100%;
+	rows: '10';
+}
