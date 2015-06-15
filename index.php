@@ -8,19 +8,12 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <?php 
-        $pages = [
-                    'home'=>'assets/pages/home.html',
-                    'login'=>'assets/pages/login.html',
-                    'services'=>'pages/services.php',
-                    'contact'=>'pages/contact.php',
-                ];
-    ?>
+    
 </head>
 
 <body>
     <header class="col-xs-12 col-md-12">
-    <ul class="navbar-nav"></ul>
+        <ul class="navbar-nav nav"></ul>
        
     </header>
     <div class="main_body col-xs-12 col-md-12">

@@ -6,16 +6,16 @@ menu_links = {
 	'login':{
 		text: 'login',
 		file: 'login.html',
-	}
+	},
 	'new user':{
-		text: 'New User?',
-		file: 'user_create.html'
-	}
+		text: 'new user',
+		file: 'new_user.html',
+	},
 	'home':{
 		text: 'home',
-		file: 'home.html'
+		file: 'home.html',
 		default: true
-	}
+	},
 }
 /*
 This function is used to create the list items for the links above. 
@@ -27,7 +27,7 @@ function attach_links(){
 		var a = $('<a>',{
 			text:menu_links[key].text,
 			class: 'nav_bar_link_style'
-		}).click(function{
+		}).click(function(){
 			load_page($(this).text());
 		});
 		li.append(a);
@@ -45,7 +45,7 @@ index.php page.
 function load_page(page){
 	target_url = menu_links[page].file;
 	$.ajax({
-		url: 'pages/'+target_url,
+		url: 'assets/pages/'+target_url,
 		dataType: 'html',
 		cache: false,
 		success: function(response){
@@ -56,7 +56,5 @@ function load_page(page){
 		
 }
 $(document).ready(function(){
-	$('#login').click(function(){
-		load_page();
-	});
+	attach_links();
 });
