@@ -12,6 +12,7 @@ function login(){
 		dataType:'json',
 		method: 'POST',
 		crossDomain: true,
+		cache: false,
 		data:{
 			username: username,
 			password: password,
@@ -23,7 +24,6 @@ function login(){
 			}
 			else
 			{
-				var user_id = response.row['id'];
 				$.ajax({
 					url: 'includes/functions/main_text_area.html',
 					dataType: 'html',
@@ -31,6 +31,7 @@ function login(){
 					success: function(response){
 						$('.main_body').html('');
 						$('.main_body').append(response);
+						console.log('login response is ', response);
 					}
 				});
 			}

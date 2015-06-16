@@ -58,13 +58,4 @@ function load_page(page){
 $(document).ready(function(){
 	//creates links from the function above
     attach_links();
-    //attaches the login function to the login button with click handler
-    $('#login_btn').click(function(){
-      login();
-    });
-    //attaches the account_create function to the add account button
-    $('#add_account_btn').click(function(){
-        account_create();
-    });
-
 });
