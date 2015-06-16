@@ -3,26 +3,27 @@ function submit_thought(){
 		{
 			console.log('no thoughts?');
 		}
-		else
-		{
-			var new_entry = {};
-			new_entry.title = $('.title_thoughts').val();
-			new_entry.thought = $('.textarea_thoughts').val();
+	else
+	{
+		var new_entry = {};
+		new_entry.title = $('.title_thoughts').val();
+		new_entry.thought = $('.textarea_thoughts').val();
+		console.log('new entry is ', new_entry);
 
-			$.ajax({
-				url:'includes/functions/submit_thought_handler.php',
-				dataType: 'json',
-				method: 'POST',
-				crossdomain: true,
-				cache: false,
-				data: {
-					title: new_entry.title,
-					entry: new_entry.thought,
-				},
-				success:function(response){
-					console.log('submit_thought response is ', repsonse);
-				}
-			});
-		}
+		$.ajax({
+			url:'includes/functions/submit_thought_handler.php',
+			dataType: 'json',
+			method: 'POST',
+			crossdomain: true,
+			cache: false,
+			data: {
+				title: new_entry.title,
+				entry: new_entry.thought,
+			},
+			success:function(response){
+				console.log('submit_thought response is ', response);
+			}
+		});
+	}
 
 }

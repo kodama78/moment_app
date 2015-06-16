@@ -9,6 +9,7 @@
     <script type="text/javascript" src="assets/main.js"></script>
     <script type="text/javascript" src="includes/functions/login_ajax_call.js"></script>
     <script type="text/javascript" src="includes/functions/account_create.js"></script>
+     <script type="text/javascript" src="includes/functions/submit_thought.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/main.css">
 </head>
 
