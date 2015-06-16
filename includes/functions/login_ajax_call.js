@@ -17,18 +17,24 @@ function login(){
 			password: password,
 		},
 		success: function(response){			
-			console.log('success.response is', response);
-			var user_id = response.row['id'];
-			console.log('user_id is ', user_id);
-			$.ajax({
-				url: 'includes/functions/main_text_area.html',
-				dataType: 'html',
-				cache: false,
-				success: function(response){
-					$('.main_body').html('');
-					$('.main_body').append(response);
-				}
-			});
+			if(response.success == false)
+			{
+				console.log('Login failed. Incorrect username or password.');
+			}
+			else
+			{
+				var user_id = response.row['id'];
+				$.ajax({
+					url: 'includes/functions/main_text_area.html',
+					dataType: 'html',
+					cache: false,
+					success: function(response){
+						$('.main_body').html('');
+						$('.main_body').append(response);
+					}
+				});
+			}
+			
 		}
 	});
 }

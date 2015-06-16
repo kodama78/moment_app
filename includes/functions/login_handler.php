@@ -24,10 +24,14 @@
 
 	if(mysqli_num_rows($result) > 0){
 		while($inner_result = mysqli_fetch_assoc($result)){
-			$output['row'] = $inner_result;
+			$_SESSION['id'] = $inner_result;
+			$output['id'] = $_SESSION['id'];
 
 		}
 		$output['success'] = true;	
+	}
+	else{
+		$output['success'] = false;
 	}
 	echo json_encode($output);
 ?>
