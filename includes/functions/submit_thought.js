@@ -8,8 +8,6 @@ function submit_thought(){
 		var new_entry = {};
 		new_entry.title = $('.title_thoughts').val();
 		new_entry.thought = $('.textarea_thoughts').val();
-		console.log('new entry is ', new_entry);
-
 		$.ajax({
 			url:'includes/functions/submit_thought_handler.php',
 			dataType: 'json',

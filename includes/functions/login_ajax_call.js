@@ -31,7 +31,6 @@ function login(){
 					success: function(response){
 						$('.main_body').html('');
 						$('.main_body').append(response);
-						console.log('login response is ', response);
 					}
 				});
 			}
