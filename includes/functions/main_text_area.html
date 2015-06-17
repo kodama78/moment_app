@@ -1,9 +1,9 @@
 <ul class="nav nav-tabs" role="tablist" id="myTab">
-    <li role="presentation" class="col-xs-6 col-md-6 nopadding active"><a href="#thoughts" aria-controls="thoughts" role="tab" data-toggle="tab">Thoughts</a></li>
-    <li role="presentation" class="col-xs-6 col-md-6 nopadding"><a href="#recollections" aria-controls="recollections" role="tab" data-toggle="tab">Recollections</a></li>
+    <li role="presentation" class="col-xs-6 col-md-6 nopadding"><a href="#thoughts" aria-controls="thoughts" role="tab" data-toggle="tab">Thoughts</a></li>
+    <li role="presentation" class="col-xs-6 col-md-6 nopadding active"><a href="#recollections" aria-controls="recollections" role="tab" data-toggle="tab">Recollections</a></li>
 </ul>
 <div class="tab-content col-xs-12 col-md-12">
-    <div role="tabpanel" class="thoughts_pane tab-pane active col-xs-12 col-md-12" id="thoughts">
+    <div role="tabpanel" class="thoughts_pane tab-pane col-xs-12 col-md-12" id="thoughts">
         <h1>Thoughts</h1>
         <input type="text" class="title_thoughts col-xs-12 col-md-12">
         <textarea class="textarea_thoughts col-xs-10 co-xs-offset-1 col-md-10 col-md-offset-1" rows="25">
@@ -11,6 +11,9 @@
         <button type="button" class="btn-lg btn-block col-xs-8 col-md-8">Edit</button>
         <button type="submit" class="btn-lg btn-block col-xs-10 col-md-10 " onclick="submit_thought()">Submit</button>
     </div>
-    <div role="tabpanel" class="tab-pane" id="recollections">Recollections
+    <div role="tabpanel" class="tab-pane active" id="recollections">Recollections
+        <button type="button" id="recollection_btn" onclick="recollections_call()">Recall</button>
+        <div class='col-xs-12 col-md-12' id="recollections_append"></div>
+    
     </div>
 </div>

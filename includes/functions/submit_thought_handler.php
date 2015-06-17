@@ -1,7 +1,7 @@
 <?php
 session_start();
 	require('mysql_connect.php');
-	$user_id = $_SESSION['id'];
+	$user_id = $_SESSION['user_id'];
 	$title = addslashes($_POST['title']);
 	$entry = addslashes($_POST['entry']);
 	$output['success'] = false;
@@ -12,11 +12,9 @@ session_start();
 	{	
 		$query = "INSERT INTO `user_entries` (`title`, `entry`, `user_id`) VALUES ('$title', '$entry', '$user_id')";
 		$result = mysqli_query($conn, $query);
-		$sql_error = mysqli_error($conn);
-		var_dump($sql_error);
 		if(mysqli_affected_rows($conn) > 0){
 			$new_id = mysqli_insert_id($conn);
-			$output['new_id'] = $new_id;
+			$output['new_entry_id'] = $new_id;
 			$output['success'] = true;
 		}
 		else
@@ -25,5 +23,4 @@ session_start();
 		}
 	}
 	echo json_encode($output);
-
 ?>

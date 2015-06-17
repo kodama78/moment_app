@@ -24,11 +24,13 @@ function login(){
 			}
 			else
 			{
+				console.log('response for login is', response);
 				$.ajax({
 					url: 'includes/functions/main_text_area.html',
 					dataType: 'html',
 					cache: false,
 					success: function(response){
+						console.log('success, you have logged in');
 						$('.main_body').html('');
 						$('.main_body').append(response);
 					}
