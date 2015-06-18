@@ -11,12 +11,14 @@
     <script type="text/javascript" src="includes/functions/account_create.js"></script>
     <script type="text/javascript" src="includes/functions/submit_thought.js"></script>
     <script type="text/javascript" src="includes/functions/recollections.js"></script>
+    <script type="text/javascript" src="includes/functions/logout.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/main.css">
 </head>
 
 <body>
     <header class="col-xs-12 col-md-12">
         <ul class="navbar-nav nav"></ul>
+        <button type="button " class="btn logout" onclick="logout()">Logout</button>
        
     </header>
     <div class="main_body col-xs-12 col-md-12">

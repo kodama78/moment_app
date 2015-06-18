@@ -26,7 +26,7 @@ function attach_links(){
 		var li = $('<li>');
 		var a = $('<a>',{
 			text:menu_links[key].text,
-			class: 'nav_bar_link_style'
+			class: 'nav_bar_link_style ' + menu_links[key].text,
 		}).click(function(){
 			load_page($(this).text());
 		});
