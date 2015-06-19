@@ -1,4 +1,4 @@
-function submit_thought() {
+function submit_new_thought() {
     if ($('.textarea_thoughts') == '') {
         console.log('no thoughts?');
     }
@@ -8,7 +8,7 @@ function submit_thought() {
         new_entry.title = $('.title_thoughts').val();
         new_entry.thought = $('.textarea_thoughts').val();
         $.ajax({
-            url: 'includes/functions/submit_thought_handler.php',
+            url: 'includes/functions/submit_new_thought_handler.php',
             dataType: 'json',
             method: 'POST',
             crossdomain: true,

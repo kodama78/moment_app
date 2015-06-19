@@ -2,8 +2,10 @@
 <?php
 //This handles the retrieving of the information from the ajax call
 //in retrieve_entry.js and sends the row that was retrieved
+	session_start();
 	require ('mysql_connect.php');
 	$entry_id = $_POST['id'];
+	$_SESSION['entry_id'] = $_POST['id'];
 	$output['success'] = false;
 	if(!isset($entry_id)){
 	 	echo 'Entry not found. Entry was not deleted';

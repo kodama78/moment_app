@@ -17,14 +17,12 @@ function retrieve_entry(id){
 		success: function(response){
 			console.log('edit_entry response is ', response);
 			var entry_object = response.entry_info;
-			$('#recollections').toggleClass('active');
 			$('#thoughts').toggleClass('active');
+			$('#recollections').toggleClass('active');
 			$('.title_thoughts').val(entry_object.title);
 			$('.textarea_thoughts').val(entry_object.entry);
+			$('#hidden_id').val(button_id);
 			update_not_submit = true;
 		},
-		error: function(response){
-			
-		}
 	});
 }

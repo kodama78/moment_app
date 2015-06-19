@@ -54,7 +54,6 @@ function load_page(page){
 		}
 	});		
 }
-var update_not_submit = false;
 $(document).ready(function(){
 	//creates links from the function above
     attach_links();

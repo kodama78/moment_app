@@ -30,9 +30,7 @@ function login() {
                         $('.main_body').html('');
                         $('.main_body').append(response);
                         $('.submit_update_btn').click(function() {
-                            if(update_not_submit == false){
-                            	submit_thought();
-                            }
+                            	edit_or_submit_entry();
                         })
                     }
                 });
