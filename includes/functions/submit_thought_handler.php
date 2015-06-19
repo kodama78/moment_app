@@ -1,4 +1,6 @@
 <?php
+//This inserts the submitted user entry from the thoughts page into the database. Accesses the user entries table and
+//echoes a output boolean in the success key and the id of the entry in new entry id
 session_start();
 	require('mysql_connect.php');
 	$user_id = $_SESSION['user_id'];

@@ -1,4 +1,5 @@
 <?php
+//changes the $_SESSION variable 'user_id' to a empty string;
 	session_start();
 	$_SESSION['user_id'] = '';
 	$user_id = $_SESSION['user_id'];

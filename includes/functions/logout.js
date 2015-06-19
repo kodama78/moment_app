@@ -1,3 +1,7 @@
+/*
+This accesses the server and erases the user_id. It then destroys the journal entries appended to the main_text_area
+and sends the user to the login area to log back in
+*/
 function logout() {
     console.log('in the logout function');
     $.ajax({

@@ -10,7 +10,7 @@
 	}
 	else
 	{
-		$query = "SELECT ue.title, ue.entry 
+		$query = "SELECT ue.title, ue.entry, ue.id 
 			FROM user_entries AS ue 
 			JOIN users AS u ON u.id = ue.user_id 
 			WHERE u.id = '$user_id'"; 

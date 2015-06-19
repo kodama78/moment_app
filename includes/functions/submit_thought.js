@@ -1,7 +1,9 @@
 function submit_thought() {
     if ($('.textarea_thoughts') == '') {
         console.log('no thoughts?');
-    } else {
+    }
+    else
+    {
         var new_entry = {};
         new_entry.title = $('.title_thoughts').val();
         new_entry.thought = $('.textarea_thoughts').val();
@@ -16,7 +18,7 @@ function submit_thought() {
                 entry: new_entry.thought,
             },
             success: function(response) {
-                if (response.success == true) {
+                if (response.success) {
                 	console.log('this is inside the submit_thought success function');
                     recollections_call();
                     $('#thoughts').toggleClass('active');
@@ -25,5 +27,4 @@ function submit_thought() {
             }
         });
     }
-
 }
