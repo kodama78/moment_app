@@ -29,7 +29,7 @@ function login() {
                         console.log('success, you have logged in');
                         $('.main_body').html('');
                         $('.main_body').append(response);
-                        $('.submit_update_btn').click(function() {
+                        $('#submit_update_btn').click(function() {
                             	edit_or_submit_entry();
                         })
                     }

@@ -18,14 +18,14 @@
     <script type="text/javascript" src="includes/functions/edit_or_submit_chooser.js"></script>
     <script type="text/javascript" src="includes/functions/submit_edited_entry.js"></script>
     <script type="text/javascript" src="includes/functions/clear_inputs_val.js"></script>
+    <script type="text/javascript" src="includes/functions/random_prompt_finder.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/main.css">
 </head>
 
 <body>
     <header class="col-xs-12 col-md-12">
         <ul class="navbar-nav nav"></ul>
-        <button type="button " class="btn logout" onclick="logout()">Logout</button>
-       
+        <button type="button" class="btn logout" onclick="logout()">Logout</button>
     </header>
     <div class="main_body col-xs-12 col-md-12">
     	
