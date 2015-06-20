@@ -18,12 +18,12 @@ function recollections_call() {
                 var entry_div = $('<div>').addClass('col-xs-12 col-md-12 journal_entry').attr('id', id);
             	var created_title = $('<h3>').text(title);
             	var created_entry = $('<p>').text(entry);
-                var delete_btn = $('<button>').addClass('btn-danger btn-small glyphicon glyphicon-remove').attr('id', id);
+                var delete_btn = $('<button>').addClass('btn btn-danger btn-small glyphicon glyphicon-remove').attr('id', id);
                 delete_btn.click(function(){
                     delete_entry($(this).attr('id'));
 
                 });
-                var edit_btn = $('<button>').addClass('btn-info btn-small fa fa-pencil-square-o').attr('id', id);
+                var edit_btn = $('<button>').addClass('btn btn-info btn-small fa fa-pencil-square-o').attr('id', id);
                 edit_btn.click(function(){
                     retrieve_entry($(this).attr('id'));
                 });

@@ -1,4 +1,7 @@
 <?php
+//This is the php handler for the edited entry.js file. It collects the 
+// info from the $_POST variable and uses and UPDATE in the $query to
+//find the ID of the entry and update it's contents
 	session_start();
 	require ('mysql_connect.php');
 	$entry_id = $_SESSION['entry_id'];
@@ -14,7 +17,6 @@
 	 	$query = "UPDATE `user_entries` 
 	 		SET title = '$title', entry = '$entry' 
 	 		WHERE id = '$entry_id'";
-	 		print($query);
 	 	$rows = mysqli_query($conn, $query);
 	 	if(mysqli_affected_rows($conn) > 0){
 			$output['success'] = true;

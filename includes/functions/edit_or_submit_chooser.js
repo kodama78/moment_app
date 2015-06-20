@@ -11,10 +11,13 @@ function edit_or_submit_entry(){
     	if($('#hidden_id').val() == '')
     	{
     		submit_new_thought();
+    		clear_inputs_val();
     	}
     	else
     	{
     		submit_edited_entry();
+    		clear_inputs_val();
+    		$('#hidden_id').val('');
     	}
     }
 }

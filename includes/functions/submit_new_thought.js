@@ -1,3 +1,6 @@
+//this is the ajax call for submitting a new thought to the server.
+//It collections the information from the inputs in the main_text_area.html
+//and sends it to the php handler.
 function submit_new_thought() {
     if ($('.textarea_thoughts') == '') {
         console.log('no thoughts?');

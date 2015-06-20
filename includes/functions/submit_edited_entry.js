@@ -1,3 +1,5 @@
+//This function submits the edited entry back to the php handler.
+//It takes its values from the entry by ID.
 function submit_edited_entry(){
 	var edited_entry = {};
         edited_entry.title = $('.title_thoughts').val();
@@ -13,10 +15,12 @@ function submit_edited_entry(){
         		entry: edited_entry.thought,
         	},
         	success: function(response){
-        		if(response.success){
-        			console.log('edited entry successful. Response is ', response);
-        			$('#hidden_id').val('');
-        		}
+        		if(response.success) {
+                	console.log('this is inside the submit_thought success function');
+                    recollections_call();
+                    $('#thoughts').toggleClass('active');
+                    $('#recollections').toggleClass('active');
+                }
         	}
         });
 }
