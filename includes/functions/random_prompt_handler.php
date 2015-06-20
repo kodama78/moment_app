@@ -21,7 +21,7 @@
 		$chosen_row = $temp_array[$random_row];
 		
 		$output['data'] = $chosen_row;
-		$_SESSION['rq_id'] = $chosen_row['id'];
+		//$_SESSION['rq_id'] = $chosen_row['id'];
 		$output['success'] = true;
 	}
 	else

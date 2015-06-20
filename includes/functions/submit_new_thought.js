@@ -10,6 +10,7 @@ function submit_new_thought() {
         var new_entry = {};
         new_entry.title = $('.title_thoughts').val();
         new_entry.thought = $('.textarea_thoughts').val();
+        new_entry.rq_id = $('#rq_id').val();
         $.ajax({
             url: 'includes/functions/submit_new_thought_handler.php',
             dataType: 'json',
@@ -19,6 +20,7 @@ function submit_new_thought() {
             data: {
                 title: new_entry.title,
                 entry: new_entry.thought,
+                rq_id: new_entry.rq_id,
             },
             success: function(response) {
                 if (response.success) {

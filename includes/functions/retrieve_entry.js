@@ -22,7 +22,6 @@ function retrieve_entry(id){
 			$('.title_thoughts').val(entry_object.title);
 			$('.textarea_thoughts').val(entry_object.entry);
 			$('#hidden_id').val(button_id);
-			update_not_submit = true;
 		},
 	});
 }

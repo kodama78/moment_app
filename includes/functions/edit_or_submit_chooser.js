@@ -12,6 +12,7 @@ function edit_or_submit_entry(){
     	{
     		submit_new_thought();
     		clear_inputs_val();
+            $('#rq_id').val('0');
     	}
     	else
     	{
