@@ -4,6 +4,7 @@ function submit_edited_entry(){
 	var edited_entry = {};
         edited_entry.title = $('.title_thoughts').val();
         edited_entry.thought = $('.textarea_thoughts').val();
+        edited_entry_set_reminder = $("#datepicker").datepicker("getDate");
         $.ajax({
         	url:'includes/functions/submit_edited_entry_handler.php',
         	dataType: 'json',

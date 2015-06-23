@@ -1,5 +1,7 @@
 /*
 this is the ajax call that sends the request to the server to retrieve the previous journal entries.
+It collects the title, entry, id and timestamp from the server and creates DOM elements for them.
+All DOM elements are located within a div.
 It does so by the _SESSION sg user id
 */
 function recollections_call() {
@@ -15,9 +17,11 @@ function recollections_call() {
             	var title = previous_entries[i].title;
             	var entry = previous_entries[i].entry;
                 var id = previous_entries[i].id;
+                var timestamp = previous_entries[i].entry_timestamp;
                 var entry_div = $('<div>').addClass('col-xs-12 col-md-12 journal_entry').attr('id', id);
             	var created_title = $('<h3>').text(title);
             	var created_entry = $('<p>').text(entry);
+                var created_timestamp = $('<p>').text(timestamp);
                 var delete_btn = $('<button>').addClass('btn btn-danger btn-small glyphicon glyphicon-remove').attr('id', id);
                 delete_btn.click(function(){
                     delete_entry($(this).attr('id'));
@@ -27,9 +31,9 @@ function recollections_call() {
                 edit_btn.click(function(){
                     retrieve_entry($(this).attr('id'));
                 });
-                entry_div.append(created_title, created_entry, delete_btn, edit_btn);
+                entry_div.append(created_title, created_timestamp, created_entry, delete_btn, edit_btn);
             	$('#recollections_append').append(entry_div);
             }
-        },
+        }
     });
 }

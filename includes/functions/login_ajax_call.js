@@ -20,7 +20,6 @@ function login() {
             if (response.success == false) {
                 console.log('Login failed. Incorrect username or password.');
             } else {
-                console.log('response for login is', response);
                 $.ajax({
                     url: 'includes/functions/main_text_area.html',
                     dataType: 'html',
@@ -29,9 +28,10 @@ function login() {
                         console.log('success, you have logged in');
                         $('.main_body').html('');
                         $('.main_body').append(response);
+                        $('#datepicker').datepicker();
                         $('#submit_update_btn').click(function() {
                             	edit_or_submit_entry();
-                        })
+                        });
                     }
                 });
             }

@@ -1,6 +1,7 @@
 <?php
 	// this is the php call that will make the sql db call that uses JOIN in mysqli to pull down all
-	//previous journal entries based on the $_SESSION id that is stored
+	//previous journal entries based on the $_SESSION id that is stored.
+	//The information that is created on the table is the title, entry, id and timestamp
 	session_start();
 	require ('mysql_connect.php');
 	$user_id = $_SESSION['user_id'];
@@ -10,7 +11,7 @@
 	}
 	else
 	{
-		$query = "SELECT ue.title, ue.entry, ue.id 
+		$query = "SELECT ue.title, ue.entry, ue.id, ue.entry_timestamp 
 			FROM user_entries AS ue 
 			JOIN users AS u ON u.id = ue.user_id 
 			WHERE u.id = '$user_id'"; 
@@ -18,13 +19,10 @@
 		if(mysqli_num_rows($rows) > 0)
 		{
 			while($row = mysqli_fetch_assoc($rows)){
+				$row['entry_timestamp'] = date('M jS Y g:iA', strtotime($row['entry_timestamp']));
 				$output['data'][] = $row;
 			}
-			$output['success'] = true;
-			// foreach ($rows as $key => $value) {
-			// 	$output[] = $value;
-			// 	$output['success'] = true;
-			// }	
+			$output['success'] = true;	
 		}
 		else
 		{

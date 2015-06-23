@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Yantramanav:100' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="assets/main.js"></script>
     <script type="text/javascript" src="includes/functions/login_ajax_call.js"></script>
     <script type="text/javascript" src="includes/functions/account_create.js"></script>
@@ -19,6 +22,8 @@
     <script type="text/javascript" src="includes/functions/submit_edited_entry.js"></script>
     <script type="text/javascript" src="includes/functions/clear_inputs_val.js"></script>
     <script type="text/javascript" src="includes/functions/random_prompt_finder.js"></script>
+    <script type="text/javascript" src="includes/functions/datepicker.js"></script>
+    <script type="text/javascript" src="includes/functions/email_test.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/main.css">
 </head>
 

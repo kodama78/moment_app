@@ -11,6 +11,7 @@ function submit_new_thought() {
         new_entry.title = $('.title_thoughts').val();
         new_entry.thought = $('.textarea_thoughts').val();
         new_entry.rq_id = $('#rq_id').val();
+        new_entry.new_entry_reminder = $("#datepicker").datepicker("getDate");
         $.ajax({
             url: 'includes/functions/submit_new_thought_handler.php',
             dataType: 'json',
@@ -21,10 +22,10 @@ function submit_new_thought() {
                 title: new_entry.title,
                 entry: new_entry.thought,
                 rq_id: new_entry.rq_id,
+                reminder: new_entry.new_entry_reminder,
             },
             success: function(response) {
                 if (response.success) {
-                	console.log('this is inside the submit_thought success function');
                     recollections_call();
                     $('#thoughts').toggleClass('active');
                     $('#recollections').toggleClass('active');
