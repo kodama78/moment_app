@@ -12,6 +12,7 @@ function submit_new_thought() {
         new_entry.thought = $('.textarea_thoughts').val();
         new_entry.rq_id = $('#rq_id').val();
         new_entry.new_entry_reminder = $("#datepicker").datepicker("getDate");
+        console.log($("#datepicker").datepicker("getDate"));
         $.ajax({
             url: 'includes/functions/submit_new_thought_handler.php',
             dataType: 'json',
@@ -27,8 +28,7 @@ function submit_new_thought() {
             success: function(response) {
                 if (response.success) {
                     recollections_call();
-                    $('#thoughts').toggleClass('active');
-                    $('#recollections').toggleClass('active');
+                    $('#recollections').trigger('click');
                 }
             }
         });

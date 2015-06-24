@@ -7,16 +7,19 @@ session_start();
 	$title = addslashes($_POST['title']);
 	$entry = addslashes($_POST['entry']);
 	$rq_id = $_POST['rq_id'];
-	$reminder_date = $_POST['reminder'];
-	$reminder_date = $strtotime($reminder_date);
-	print($reminder_date);
+	$reminder_date = addslashes($_POST['reminder']);
+	// $day_array = ['Mon'=>'', 'Tue'=>'', 'Wed'=>'', 'Thu'=>'', 'Fri'=>'', 'Sat'=>'', 'Sun'=>''];
+	// $cleaned_reminder_date = strtr($reminder_date, $day_array);
+	$reminder_date = date("Y-m-d H:i:s", strtotime($reminder_date));
 	$output['success'] = false;
 	if(!isset($user_id)){
 		$output['message'] = 'you need to log in';
 	}
 	else
 	{	
-		$query = "INSERT INTO `user_entries` (`title`, `entry`, `user_id`, `rq_id`, ) VALUES ('$title', '$entry', '$user_id', '$rq_id')";
+		$query = "INSERT INTO `user_entries` (`title`, `entry`, `user_id`, `rq_id`, `entry_return_date`) 
+									VALUES ('$title', '$entry', '$user_id', '$rq_id', '$reminder_date')";
+		$output['query'] = $query;
 		$result = mysqli_query($conn, $query);
 		if(mysqli_affected_rows($conn) > 0){
 			$new_id = mysqli_insert_id($conn);
