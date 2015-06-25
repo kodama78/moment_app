@@ -16,7 +16,6 @@
 		}
 		foreach($array as $value)
 		{
-			//$email_to_user_array[] = $value['email'];
 			print("this row: ".print_r($value,true));
 			$subject = $value['firstname']. ' your memory reminder - '.$value['title'];
 			$message = $value['entry'];

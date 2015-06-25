@@ -26,10 +26,12 @@ header{
 }
 /* 
 ====================================
-LANDING PAGE
+LOGIN PAGE
 ====================================
 */
-
+#login_failed{
+	visibility: hidden;
+}
 /* 
 ====================================
 MAIN TEXT AREA

@@ -29,8 +29,9 @@
 
 <body>
     <header class="col-xs-12 col-md-12">
+        <h1>Time Capsule</h1>
         <ul class="navbar-nav nav"></ul>
-        <button type="button" class="btn logout" onclick="logout()">Logout</button>
+        <!-- <button type="button" class="btn logout" onclick="logout()">Logout</button> -->
     </header>
     <div class="main_body col-xs-12 col-md-12">
     	

@@ -2,33 +2,47 @@
 These are used to create the menu links that are located in the header.
 Creating this dynamically in case menu needs to be changed at a later date.
 */
-menu_links = {
+var login_menu_links = {
 	'login':{
 		text: 'login',
 		file: 'login.html',
+		default: true,
 	},
 	'new user':{
 		text: 'new user',
 		file: 'new_user.html',
 	},
-	'home':{
-		text: 'home',
-		file: 'home.html',
-		default: true
+}
+
+var logged_in_menu_links = {
+	'logout':{
+		text: 'logout',
+		file: 'logout.html',
 	},
 }
 /*
 This function is used to create the list items for the links above. 
 Created in list format for bootstrap.
 */
-function attach_links(){
+function attach_links(menu_links){
 	for (key in menu_links){
 		var li = $('<li>');
 		var a = $('<a>',{
 			text:menu_links[key].text,
 			class: 'nav_bar_link_style ' + menu_links[key].text,
 		}).click(function(){
-			load_page($(this).text());
+			if(menu_links == login_menu_links)
+			{
+				load_page(menu_links, $(this).text());
+			}
+			else
+			{	
+				console.log('key is ', key);
+				// key.click(function(){
+				// 	key();
+				// });
+			}
+			
 		});
 		li.append(a);
 		$('.navbar-nav').append(li);
@@ -42,7 +56,7 @@ this function contains the ajax call that is used in the attach_links function
 above. It appends the content from each page to the main_body of the 
 index.php page.
 */
-function load_page(page){
+function load_page(menu_links, page){
 	target_url = menu_links[page].file;
 	$.ajax({
 		url: 'includes/functions/'+target_url,
@@ -56,5 +70,5 @@ function load_page(page){
 }
 $(document).ready(function(){
 	//creates links from the function above
-    attach_links();
+    attach_links(login_menu_links);
 });

@@ -32,5 +32,5 @@
 	else{
 		$output['success'] = false;
 	}
-	echo json_encode($_SESSION);
+	echo json_encode($output);
 ?>

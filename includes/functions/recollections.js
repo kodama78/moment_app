@@ -22,16 +22,16 @@ function recollections_call() {
             	var created_title = $('<h3>').text(title);
             	var created_entry = $('<p>').text(entry);
                 var created_timestamp = $('<p>').text(timestamp);
-                var delete_btn = $('<button>').addClass('btn btn-danger btn-small glyphicon glyphicon-remove').attr('id', id);
-                delete_btn.click(function(){
-                    delete_entry($(this).attr('id'));
+                // var delete_btn = $('<button>').addClass('btn btn-danger btn-small glyphicon glyphicon-remove').attr('id', id);
+                // delete_btn.click(function(){
+                //     delete_entry($(this).attr('id'));
 
-                });
-                var edit_btn = $('<button>').addClass('btn btn-info btn-small fa fa-pencil-square-o').attr('id', id);
-                edit_btn.click(function(){
-                    retrieve_entry($(this).attr('id'));
-                });
-                entry_div.append(created_title, created_timestamp, created_entry, delete_btn, edit_btn);
+                // });
+                // var edit_btn = $('<button>').addClass('btn btn-info btn-small fa fa-pencil-square-o').attr('id', id);
+                // edit_btn.click(function(){
+                //     retrieve_entry($(this).attr('id'));
+                // });
+                entry_div.append(created_title, created_timestamp, created_entry);
             	$('#recollections_append').append(entry_div);
             }
         }

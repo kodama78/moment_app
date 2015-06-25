@@ -14,7 +14,9 @@ function logout() {
             console.log('logout response is ', response);
             if(response.success == true){
                 $('#recollections_append').html('');
-                $('.login').click();
+                $('.navbar-nav').html('');
+                $('.main_body').append('login.html');
+                attach_links(login_menu_links);
             }
             
         }
