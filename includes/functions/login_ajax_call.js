@@ -23,11 +23,12 @@ function login() {
 
             } else {
                 $.ajax({
-                    url: 'includes/functions/main_text_area.html',
+                    url: 'includes/functions/moment.html',
                     dataType: 'html',
                     cache: false,
                     success: function(response) {
                         console.log('success, you have logged in');
+
                         $('#login_failed').css('visibility', 'hidden');
                         $('.navbar-nav').html('');
                         attach_links(logged_in_menu_links);
@@ -37,9 +38,8 @@ function login() {
                         $('.logout').click(function(){
                             logout();
                         });
-
-                        $('#submit_update_btn').click(function() {
-                            	edit_or_submit_entry();
+                        $('.moments').click(function(){
+                            recollections_call();
                         });
                     }
                 });

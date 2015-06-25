@@ -17,7 +17,7 @@
     <script type="text/javascript" src="includes/functions/recollections.js"></script>
     <script type="text/javascript" src="includes/functions/logout.js"></script>
     <script type="text/javascript" src="includes/functions/delete.js"></script>
-    <script type="text/javascript" src="includes/functions/retrieve_entry.js"></script>
+    <script type="text/javascript" src="includes/functions/retrieve_to_edit_entry.js"></script>
     <script type="text/javascript" src="includes/functions/edit_or_submit_chooser.js"></script>
     <script type="text/javascript" src="includes/functions/submit_edited_entry.js"></script>
     <script type="text/javascript" src="includes/functions/clear_inputs_val.js"></script>

@@ -14,12 +14,12 @@ function recollections_call() {
             console.log('recollections_call response is', response);
             previous_entries = response.data;
             for(var i = 0; i < previous_entries.length; i++){
-            	var title = previous_entries[i].title;
+            	var title = previous_entries[i].question;
             	var entry = previous_entries[i].entry;
                 var id = previous_entries[i].id;
                 var timestamp = previous_entries[i].entry_timestamp;
                 var entry_div = $('<div>').addClass('col-xs-12 col-md-12 journal_entry').attr('id', id);
-            	var created_title = $('<h3>').text(title);
+            	var created_title = $('<h4>').text(title);
             	var created_entry = $('<p>').text(entry);
                 var created_timestamp = $('<p>').text(timestamp);
                 // var delete_btn = $('<button>').addClass('btn btn-danger btn-small glyphicon glyphicon-remove').attr('id', id);

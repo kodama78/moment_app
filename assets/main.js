@@ -19,6 +19,14 @@ var logged_in_menu_links = {
 		text: 'logout',
 		file: 'logout.html',
 	},
+	'moment':{
+		text: 'moment',
+		file: 'moment.html',
+	},
+	'past moments':{
+		text: 'past moments',
+		file: 'past_moments.html',
+	}
 }
 /*
 This function is used to create the list items for the links above. 
@@ -31,17 +39,7 @@ function attach_links(menu_links){
 			text:menu_links[key].text,
 			class: 'nav_bar_link_style ' + menu_links[key].text,
 		}).click(function(){
-			if(menu_links == login_menu_links)
-			{
-				load_page(menu_links, $(this).text());
-			}
-			else
-			{	
-				console.log('key is ', key);
-				// key.click(function(){
-				// 	key();
-				// });
-			}
+			load_page(menu_links, $(this).text());
 		});
 		li.append(a);
 		$('.navbar-nav').append(li);
@@ -57,6 +55,7 @@ index.php page.
 */
 function load_page(menu_links, page){
 	target_url = menu_links[page].file;
+	console.log(target_url);
 	$.ajax({
 		url: 'includes/functions/'+target_url,
 		dataType: 'html',
@@ -64,6 +63,9 @@ function load_page(menu_links, page){
 		success: function(response){
 			$('.main_body').html('');
 			$('.main_body').append(response);
+			if(target_url == 'moment.html'){
+				calendar();
+			}
 		}
 	});		
 }
