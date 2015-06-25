@@ -2,11 +2,11 @@
 This function retrieves the entry from the serve and repopulates the text
 input area with the retrieved information
 */
-function retrieve_entry(id){
+function retrieve_to_edit_entry(id){
 	var button_id = id;
 	console.log('button_id is ', button_id);
 	$.ajax({
-		url:'includes/functions/retrieve_entry_handler.php',
+		url:'includes/functions/retrieve_to_edit_entry_handler.php',
 		dataType: 'json',
 		method: 'POST',
 		crossdomain: true,

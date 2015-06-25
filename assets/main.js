@@ -42,7 +42,6 @@ function attach_links(menu_links){
 				// 	key();
 				// });
 			}
-			
 		});
 		li.append(a);
 		$('.navbar-nav').append(li);

@@ -11,10 +11,10 @@
 	}
 	else
 	{
-		$query = "SELECT ue.title, ue.entry, ue.id, ue.entry_timestamp 
-			FROM user_entries AS ue 
+		$query = "SELECT * FROM user_entries AS ue 
 			JOIN users AS u ON u.id = ue.user_id 
-			WHERE u.id = '$user_id'"; 
+			JOIN random_questions ON ue.rq_id = random_questions.id 
+			WHERE u.id = '$user_id'";
 		$rows = mysqli_query($conn, $query);
 		if(mysqli_num_rows($rows) > 0)
 		{

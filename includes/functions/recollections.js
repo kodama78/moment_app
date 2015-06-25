@@ -29,7 +29,7 @@ function recollections_call() {
                 // });
                 // var edit_btn = $('<button>').addClass('btn btn-info btn-small fa fa-pencil-square-o').attr('id', id);
                 // edit_btn.click(function(){
-                //     retrieve_entry($(this).attr('id'));
+                //     retrieve_to_edit_entry($(this).attr('id'));
                 // });
                 entry_div.append(created_title, created_timestamp, created_entry);
             	$('#recollections_append').append(entry_div);
