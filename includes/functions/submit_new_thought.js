@@ -23,7 +23,6 @@ function submit_new_thought() {
         success: function(response) {
             if (response.success) {
                 recollections_call();
-                $('#recollections').trigger('click');
             }
         }
     });
