@@ -35,7 +35,7 @@ function account_create() {
             success: function(response){
             	console.log('response for account_create is', response);
                 if(response.success == false){
-                    console.log('Sorry, user not created, ' + response.output.message);
+                    console.log('Sorry, user not created, ' + response.message);
                 }
             }
         });

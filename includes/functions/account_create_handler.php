@@ -13,7 +13,7 @@
 	if(mysqli_num_rows($user_result) > 0)
 	{
 		$output['message'] = 'Sorry, that username is taken';
-		echo json_encode($output);
+		print json_encode($output);
 	}
 	else
 	{
@@ -21,11 +21,23 @@
 		$email_result = mysqli_query($conn, $check_user_email);
 		if(mysqli_num_rows($email_result) > 0){
 			$output['message'] = 'Sorry, an account for that email already exists.';
-			echo json_encode($output);
+			print json_encode($output);
 		}
-		// else
-		// {
-		// 	// $input_new_user = 
-		// }
+		else
+		{
+			$insert_new_user = "INSERT INTO `users` (`username`, `email`, `password`, `firstname`, `lastname`) 
+											VALUES ('$username', '$email', '$password', '$firstname', '$lastname')";
+			$insert_user_result = mysqli_query($conn, $insert_new_user);
+			if(mysqli_affected_rows($conn) > 0){
+				$output['success'] = true;
+				$output['message'] = "User created! Let's start our first Moment...";
+				print json_encode($output);
+			}
+			else{
+				$output['message'] = "Database error, user not added";
+				print json_encode($output);
+			}
+			
+		}
 	}
 ?>
